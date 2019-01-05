@@ -27,7 +27,7 @@ requirements:
     - pkg-config  # [unix]
   host:
     - zlib
-    - krb5
+    - krb5           # [not linux-aarch64]
     - libssh2
     - openssl        # [unix]
     - zlib
@@ -42,7 +42,7 @@ outputs:
         - openssl   # [unix]
         - zlib
         - libssh2
-        - krb5
+        - krb5           # [not linux-aarch64]
       run:
         - libssh2
     build:
@@ -73,7 +73,7 @@ outputs:
         - {{ pin_subpackage('libcurl', exact=True) }}
         - zlib
         - libssh2
-        - krb5
+        - krb5           # [not linux-aarch64]
       run:
         - {{ pin_subpackage('libcurl', exact=True) }}
         - libssh2
