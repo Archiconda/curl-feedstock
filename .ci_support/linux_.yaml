@@ -2,8 +2,6 @@ c_compiler:
 - gcc
 channel_sources:
 - conda-forge,defaults
-krb5:
-- '1.16'
 libssh2:
 - '1.8'
 openssl:
@@ -11,8 +9,6 @@ openssl:
 perl:
 - '5.26'
 pin_run_as_build:
-  krb5:
-    max_pin: x.x
   libssh2:
     max_pin: x.x
   openssl:
